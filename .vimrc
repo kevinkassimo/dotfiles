@@ -14,3 +14,5 @@ set cindent
 set whichwrap+=<,>,h,l,[,]
 " Stop indening when pasting with the mouse
 set pastetoggle=<f5>
+" Stop tab converting in Makefiles
+autocmd Filetype make setlocal noexpandtab
