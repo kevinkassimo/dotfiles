@@ -80,3 +80,6 @@ alias dot='~/.dot/dot.sh'
 
 # SEASHelper config & aliasing
 alias seas="/Users/kevinqian/MyProgram/SEASHelper/seas_mac"
+
+# Replace Vim with MacVim
+alias vim='mvim -v'
