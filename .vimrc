@@ -44,6 +44,18 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Ultisnip
+Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
+
+" Powerline
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" Git Glutter
+Plugin 'airblade/vim-gitgutter'
+
+" JSX Syntax
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -59,6 +71,16 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+
+" GUI compatibility setups
+if has("gui_running")
+    let s:uname = system("uname")
+   if s:uname == "Darwin\n"
+      set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h18
+      set encoding=utf-8
+   endif
+endif
 
 
 
@@ -82,6 +104,8 @@ set pastetoggle=<f5>
 autocmd Filetype make setlocal noexpandtab
 " Show line number
 set number
+" Highlight search result
+set hlsearch
 " Set mapleader for later nnoremap <leader> settings
 let mapleader = ','
 
