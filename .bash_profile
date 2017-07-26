@@ -83,3 +83,7 @@ alias seas="/Users/kevinqian/MyProgram/SEASHelper/seas_mac"
 
 # Replace Vim with MacVim
 alias vim='mvim -v'
+# Setting PATH for Python 2.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH

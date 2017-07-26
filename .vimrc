@@ -1,3 +1,9 @@
+" FIX (with library)
+for f in glob('~/.vim/fix/*.vim', 0, 1)
+   execute 'source' f
+endfor
+
+
 " VUNDLE
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -15,6 +21,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+" Helpful tool for git view
+Plugin 'tpope/vim-unimpaired'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -32,7 +41,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes'
 
 " YouCompleteMe 
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 " NERD tree
 Plugin 'scrooloose/nerdtree'
@@ -57,6 +66,9 @@ Plugin 'airblade/vim-gitgutter'
 " JSX Syntax
 Plugin 'mxw/vim-jsx'
 
+" Image preview for Vim
+Plugin 'ashisha/image.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -72,14 +84,13 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
 " GUI compatibility setups
 if has("gui_running")
-    let s:uname = system("uname")
-   if s:uname == "Darwin\n"
-      set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h18
-      set encoding=utf-8
-   endif
+     let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h18
+        set encoding=utf-8
+    endif
 endif
 
 
