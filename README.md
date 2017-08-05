@@ -14,6 +14,7 @@ All tracked files are specified in `.dotrc`, which is added with `dot -s [filena
 ```
 .bash_profile # I am not using .bashrc
 .emacs.d # emacs config
+.vim # vim plugins and custom source scripts
 .vimrc # vim config
 .dot # where dot script is saved
 .dotrc # dot tracked file config
