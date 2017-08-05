@@ -128,5 +128,10 @@ let mapleader = ','
 
 " Run splitted configs
 for f in glob('~/.vim/source/*.vim', 0, 1)
-   execute 'source' f
+    execute 'source' f
+endfor
+
+" Run custom vimscripts
+for f in glob('~/.vim/custom/*.vim', 0, 1)
+    execute 'source' f
 endfor
