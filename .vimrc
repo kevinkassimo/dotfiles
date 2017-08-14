@@ -63,9 +63,6 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Git Glutter
 Plugin 'airblade/vim-gitgutter'
 
-" JSX Syntax
-Plugin 'mxw/vim-jsx'
-
 " Image preview for Vim
 Plugin 'ashisha/image.vim'
 
@@ -75,8 +72,16 @@ Plugin 'ramitos/jsctags'
 " Tagbar
 Plugin 'majutsushi/tagbar'
 
+" LANGUAGE SUPPORT
+
+" JSX Syntax
+Plugin 'mxw/vim-jsx'
+
 " VIM Go
 Plugin 'fatih/vim-go'
+
+" VIM Crystal
+Plugin 'rhysd/vim-crystal'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -92,3 +92,6 @@ export PATH
 # GOPATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# Modify emacs to reflect on the lastest emacs build
+alias emacs="/usr/local/Cellar/emacs/*/bin/emacs"
