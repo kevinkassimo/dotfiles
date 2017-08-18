@@ -74,14 +74,23 @@ Plugin 'majutsushi/tagbar'
 
 " LANGUAGE SUPPORT
 
+" JavaScript Support
+Plugin 'pangloss/vim-javascript'
+
 " JSX Syntax
 Plugin 'mxw/vim-jsx'
+
+" JavaScript Library Syntax
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " VIM Go
 Plugin 'fatih/vim-go'
 
 " VIM Crystal
 Plugin 'rhysd/vim-crystal'
+
+" React Snippet
+Plugin 'justinj/vim-react-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
