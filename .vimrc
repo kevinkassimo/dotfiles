@@ -1,4 +1,5 @@
 " FIX (with library)
+" This should be executed BEFORE all others!
 for f in glob('~/.vim/fix/*.vim', 0, 1)
    execute 'source' f
 endfor
@@ -72,7 +73,22 @@ Plugin 'ramitos/jsctags'
 " Tagbar
 Plugin 'majutsushi/tagbar'
 
-" LANGUAGE SUPPORT
+
+" <<< TEXT MANUPULATION >>>
+
+" Surround text with parentheses or quotation marks
+Plugin 'tpope/vim-surround'
+
+" Indentation helper
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Auto insert closing brackets
+Plugin 'Raimondi/delimitMate'
+
+" <<< LANGUAGE SUPPORT >>>
+
+" General Syntax Check
+Plugin 'scrooloose/syntastic'
 
 " JavaScript Support
 Plugin 'pangloss/vim-javascript'
@@ -109,7 +125,7 @@ filetype plugin indent on    " required
 
 " GUI compatibility setups
 if has("gui_running")
-     let s:uname = system("uname")
+    let s:uname = system("uname")
     if s:uname == "Darwin\n"
         set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h18
         set encoding=utf-8
@@ -143,12 +159,17 @@ set hlsearch
 " Set mapleader for later nnoremap <leader> settings
 let mapleader = ','
 
+" Run custom presource configs so that they could be used in source/*.vim files
+for f in glob('~/.vim/presource-config/*.vim', 0, 1)
+    execute 'source' f
+endfor
+
 " Run splitted configs
 for f in glob('~/.vim/source/*.vim', 0, 1)
     execute 'source' f
 endfor
-
-" Run custom vimscripts
+ 
+" Run custom vimscripts (they are run AFTER source files)
 for f in glob('~/.vim/custom/*.vim', 0, 1)
     execute 'source' f
 endfor
