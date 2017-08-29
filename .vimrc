@@ -73,6 +73,8 @@ Plugin 'ramitos/jsctags'
 " Tagbar
 Plugin 'majutsushi/tagbar'
 
+" Vim Devicons
+Plugin 'ryanoasis/vim-devicons'
 
 " <<< TEXT MANUPULATION >>>
 
@@ -84,6 +86,12 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 " Auto insert closing brackets
 Plugin 'Raimondi/delimitMate'
+
+" NERD Commenter
+Plugin 'scrooloose/nerdcommenter'
+
+" Vim EasyMotion
+Plugin 'easymotion/vim-easymotion'
 
 " <<< LANGUAGE SUPPORT >>>
 
@@ -127,7 +135,8 @@ filetype plugin indent on    " required
 if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h18
+        "set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline:h18
+        set guifont=Meslo\ LG\ S\ Regular\ Nerd\ Font\ Complete:h18
         set encoding=utf-8
     endif
 endif
