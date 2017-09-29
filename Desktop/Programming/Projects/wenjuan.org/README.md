@@ -1,3 +1,0 @@
-# Wenjuan.ORG  
-
-Hello world!
