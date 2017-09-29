@@ -116,6 +116,14 @@ Plugin 'rhysd/vim-crystal'
 " React Snippet
 Plugin 'justinj/vim-react-snippets'
 
+" <<< EXTENSION >>>
+
+" Use dash inside vim
+Plugin 'rizzatti/dash.vim'
+
+" Instant Markdown preview, requires `npm -g install instant-markdown-d` 
+Plugin 'suan/vim-instant-markdown'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
