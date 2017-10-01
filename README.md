@@ -1,11 +1,11 @@
 # dotfiles of Kevin Qian
 
 ## Why
-I started to manage and host my dotfiles inspired by some of my friend (special thanks to Colin). Also there are some good suggestions in http://dotfiles.github.io  
+I started to manage and host my dotfiles inspired by some of my friend (special thanks to Colin [@colinxy](https://github.com/colinxy)). Also there are some good suggestions in http://dotfiles.github.io  
 
-I was foolish enough not to use soft links to keep my dotfiles from some folder maybe named `~/dotfiles`, and instead directly placed `.git` at my `~` directory... This resulted in my writing of `dot.sh` in my `.dot` directory, along with records saved in `.dotrc` and `.dotbase`  
+Unfortunately, I have to __GIVE UP__ my original `dot` utils. Creating a `.git` at `$HOME` directory degrades my terminal's performance seriously (as my terminal has git highlighting from Powerline)   
 
-Anyways, I may just further exploit my `.dot/dot.sh`...  
+I have also migrated my `emacs` to `spacemacs`, preferring an artificial `evil` layer on top.  
 
 I have just started to care about these dotfiles, so the configurations are mostly lacking.  
 
@@ -16,7 +16,4 @@ All tracked files are specified in `.dotrc`, which is added with `dot -s [filena
 .emacs.d # emacs config
 .vim # vim plugins and custom source scripts
 .vimrc # vim config
-.dot # where dot script is saved
-.dotrc # dot tracked file config
-.dotbase # base path of dot tracking, here is just my HOME directory
 ```
