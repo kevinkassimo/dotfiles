@@ -116,6 +116,9 @@ Plugin 'rhysd/vim-crystal'
 " React Snippet
 Plugin 'justinj/vim-react-snippets'
 
+" Emmet
+Plugin 'mattn/emmet-vim'
+
 " <<< EXTENSION >>>
 
 " Use dash inside vim
@@ -157,9 +160,9 @@ set showcmd
 syntax on
 colorscheme monokai
 " Tab related
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set smartindent
 set cindent

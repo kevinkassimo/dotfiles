@@ -1,15 +1,5 @@
-# Setting PATH for Python 3.5
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
-export PATH
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-
 # MY PATHS
-PATH="/Users/kevinqian/bin:${PATH}"
+PATH="/Users/kevinqian/my_usr/bin:${PATH}"
 
 
 # Setting JSC for simple console display
@@ -46,8 +36,6 @@ alias seas9="ssh kun@lnxsrv09.seas.ucla.edu"
 
 # Setting PATH for Python 2.7
 # The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
 export NODE_PATH=/usr/local/lib/node_modulesexport NODE_PATH=/usr/local/lib/node_modules
 export NODE_PATH=/usr/local/lib/node_modulesexport NODE_PATH=/usr/local/lib/node_modules
 
@@ -85,8 +73,6 @@ alias seas="/Users/kevinqian/MyProgram/SEASHelper/seas_mac"
 alias vim='mvim -v'
 # Setting PATH for Python 2.7
 # The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
 
 
 # GOPATH
@@ -98,3 +84,19 @@ alias emacs="/usr/local/Cellar/emacs/*/bin/emacs"
 
 # Set default editor
 export EDITOR="/usr/local/bin/mvim"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+
+# aliasing ipython using another theme color
+alias ipython="ipython --colors=Linux"
+
+# aliasing py for easy python invocation
+py() {
+  if [[ "$1" == '-2' ]]; then
+    shift
+    python $@
+  else
+    python3 $@
+  fi
+}

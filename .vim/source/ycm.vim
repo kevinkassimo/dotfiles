@@ -11,7 +11,7 @@ inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
 inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
 inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 " Enable tab complete first option
-" inoremap <expr> <tab>      pumvisible() ? "\<C-n>\<C-y>\<Esc>a" : "\<tab>"
+inoremap <expr> <tab>      pumvisible() ? "\<C-n>\<C-y>\<Esc>a" : "\<tab>"
 
 
 "youcompleteme  默认tab  s-tab 和自动补全冲突
