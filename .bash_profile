@@ -1,5 +1,5 @@
 # MY PATHS
-PATH="/Users/kevinqian/my_usr/bin:${PATH}"
+PATH="/Users/kevinqian/.ksm/usr/bin:${PATH}"
 
 
 # Setting JSC for simple console display
@@ -95,8 +95,22 @@ alias ipython="ipython --colors=Linux"
 py() {
   if [[ "$1" == '-2' ]]; then
     shift
-    python $@
+    python2 $@
   else
     python3 $@
   fi
 }
+
+# set Git vim message editor
+export GIT_EDITOR='mvim -v'
+
+# Add custom functions
+source "$HOME/.bash_custom_func"
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# depot tools
+PATH="$PATH:$HOME/.ksm/usr/lib/depot_tools"
+
+# for rust
+export PATH="$PATH:$HOME/.cargo/bin"

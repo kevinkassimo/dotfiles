@@ -5,6 +5,7 @@ nmap <buffer> <silent> <Down> gj
 nmap <buffer> <silent> <Up> gk
 inoremap <buffer> <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <buffer> <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+
 noremap <silent> <Leader>w :call ToggleWrapMove()<CR>
 
 function ToggleWrapMove()
@@ -22,8 +23,8 @@ function ToggleWrapMove()
     imap <buffer> <silent> <Up> <C-o>gk
     nmap <buffer> <silent> <Down> gj
     nmap <buffer> <silent> <Up> gk
-    inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-    inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+    inoremap <buffer> <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+    inoremap <buffer> <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
   endif
 endfunction
 

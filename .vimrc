@@ -65,7 +65,8 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'airblade/vim-gitgutter'
 
 " Image preview for Vim
-Plugin 'ashisha/image.vim'
+" Plugin 'ashisha/image.vim'
+" Plugin 'kevinkassimo/image.vim'
 
 " JS ctags
 Plugin 'ramitos/jsctags'
@@ -118,6 +119,9 @@ Plugin 'justinj/vim-react-snippets'
 
 " Emmet
 Plugin 'mattn/emmet-vim'
+
+" VIM Markdown Table styles
+Plugin 'dhruvasagar/vim-table-mode'
 
 " <<< EXTENSION >>>
 
@@ -178,6 +182,9 @@ set number
 set hlsearch
 " Set mapleader for later nnoremap <leader> settings
 let mapleader = ','
+" Try allowing mouse
+set mouse=a
+" Above disables the normal copying, so we we would fix it in custom vimscripts
 
 " Run custom presource configs so that they could be used in source/*.vim files
 for f in glob('~/.vim/presource-config/*.vim', 0, 1)
