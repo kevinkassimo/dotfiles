@@ -13,16 +13,16 @@ alias undel=undelfile
 alias ct=cleartrash
 undelfile()
 {
-    mv -i ~/.mytrash/$@ ./
+  mv -i ~/.mytrash/$@ ./
 }
 trash()
 {
-    mv $@ ~/.mytrash/
+  mv $@ ~/.mytrash/
 }
 cleartrash()
 {
-    read -p "Clear Trash: confirm clear trash?[n]" confirm
-    [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -ri ~/.mytrash/*
+  read -p "Clear Trash: confirm clear trash?[n]" confirm
+  [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -ri ~/.mytrash/*
 }
 
 
@@ -47,10 +47,12 @@ PS1="[\u \w]$ "
 
 
 # AGNOSTER BASH THEME
-export THEME=$HOME/TerminalThemes/agnoster/agnoster.bash
-if [[ -f $THEME ]]; then
+if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+  export THEME=$HOME/TerminalThemes/agnoster/agnoster.bash
+  if [[ -f $THEME ]]; then
     export DEFAULT_USER=`whoami`
     source $THEME
+  fi
 fi
 
 # COLORING
