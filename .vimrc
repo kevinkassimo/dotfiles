@@ -158,7 +158,7 @@ endif
 set showcmd
 " Syntax Highlight
 syntax on
-colorscheme monokai
+colorscheme molokai
 " Tab related
 set tabstop=2
 set expandtab
@@ -178,6 +178,8 @@ set number
 set hlsearch
 " Set mapleader for later nnoremap <leader> settings
 let mapleader = ','
+" Enable mouse selection
+set mouse=a
 
 " Run custom presource configs so that they could be used in source/*.vim files
 for f in glob('~/.vim/presource-config/*.vim', 0, 1)

@@ -27,3 +27,4 @@ let g:airline_symbols.maxlinenr = ''
 
 " System time
 let g:airline_section_b = '%{strftime("%H:%M")}'
+let g:airline_powerline_fonts = 1
